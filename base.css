@@ -1,0 +1,61 @@
+html, body {
+  height: 100%;
+  width: 100%;}
+
+*{
+  margin:0px;
+  padding:0px;
+}
+
+
+/* STYLE SECTIONING TAGS */
+body {
+  background-color: #fffaf5;
+}
+
+body{
+  font-size: 2ch;
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+  background-color: white;
+}
+
+h1 {
+  font-family: 'Limelight', cursive;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color:#33b5e5;
+  border-right:solid #33b5e5;
+  border-left:solid #33b5e5;
+  border-width:75px;
+}
+
+.button {
+  font-family: 'Cairo', sans-serif;
+  font-size: 12px;
+  border: none;
+  color: lightgray;
+  padding: 2px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: black;
+  border: 2px solid black;
+}
+
+.button:hover {
+  background-color: #33b5e5;
+  color: white;
+}
+
+#kumonlogo{
+  width: 15%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
