@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+  <html lang="en">
+  <meta charset="UTF-8">
+  <title>Kumon Database Surfer</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='kumonface.png') }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href='output/base.css' />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+  <img src="{{url_for('static', filename='kumonlogo.png')}}" id="kumonlogo" alt="kumonlogo"/>
+</head>
+
+<body>
+  <h1>Kumon East Hanover Data Base Surfer</h1>
+  <h2>Welcome to Kumon of East Hanover's Database Surfer!</h2>
+  <h3>Please input desired student parameters</h3><br>
+
+  <form action="/submitted" enctype=multipart/form-data method="POST" onsubmit="showDiv('loading')">
+    <b>Upload CSV File</b><br>
+    <input type="file" id="fileSelect" name="file" accept=".csv" class="button">    
+    
+    <br><br>
+    <b>Reading or Math Students</b>
+    <select name="rorm" id="rorm">
+      <option value="randm">Both</option>
+      <option value="r">Reading</option>
+      <option value="m">Math</option>
+    </select>
+    <br><br>
+
+    <b>Enter kumon level</b>
+    <p>Enter 0 if not interested in surfing with Kumon Level</p>
+    <input type="text" name="kumonlevel"/>
+    <br><br>
+    
+    <b>Active or Discontinued Students</b>
+    <select name="enroll" id="enroll">
+      <option value="aandd">Both</option>
+      <option value="a">Active</option>
+      <option value="d">Discontinued</option>
+    </select>
+    <br><br>
+
+    <b>US School Grade</b>
+    <p>Select full range of Grades if not interested in surfing by US Grade Level</p>
+    <p>Starting Grade: 
+    <select name="sgrade" id="grade">
+      <option value="PK3">PK3</option>
+      <option value="PK2">PK2</option>
+      <option value="PK1">PK1</option>
+      <option value="K">K</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">Graduates</option>
+    </select></p>
+
+    <p>Ending Grade: 
+    <select name="egrade" id="grade">
+      <option value="PK3">PK3</option>
+      <option value="PK2">PK2</option>
+      <option value="PK1">PK1</option>
+      <option value="K">K</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">Graduates</option>
+    </select></p>
+    <br>
+
+    <b>Enter Birthday Range</b>
+    <p>Please enter the full year if you are not interested in surfing using birthday values</p>
+    <p>Starting Date: <input type="date" name="sd" value="2023-01-01" /></p>
+    <p>Ending Date: <input type="date" name="ed" value="2023-12-31"/></p><br>
+    
+    <input type="submit" value="Get Data" class="button">
+  </form>
+</body>
+</html>
